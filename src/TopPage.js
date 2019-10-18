@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import Recipe from "./Recipe";
+
 const TopPage = () => {
     const APP_ID = "c1d9e329";
     const APP_KEY = "0d592485277af6f7ce62ee4379a79e5d";
@@ -19,7 +20,7 @@ const TopPage = () => {
       );
       const data = await response.json();
       setRecipes(data.hits);
-      console.log(data);
+      console.log(data.hits);
     };
 
     const updateSearch = e => {
@@ -54,7 +55,7 @@ const TopPage = () => {
             image={recipe.recipe.image}
             ingredients={recipe.recipe.ingredients}
           />
-        ))}
+        ))}    
       </div>
     </div>
   );

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
-import "./App.css";
-import { Link } from "react-router-dom";
-import { async } from "q";
+import "./App.css"; 
+
 
 function ItemDetail({ match }) {
   useEffect(() => { 
@@ -18,9 +17,7 @@ function ItemDetail({ match }) {
         `https://fortnite-public-api.theapinetwork.com/prod09/item/get?ids=${match.params.id}`
       );
       const item = await fetchItem.json();
-      setItems(item);
-      console.log(item);
-      
+      setItems(item);      
   }
   
   return (
